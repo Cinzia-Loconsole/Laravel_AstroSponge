@@ -23,3 +23,5 @@ Route::get('/products', [ProductController::class,'index'])->name('products');
 
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 
+Route::get('/contactUs', [PublicController::class,'contactUs'])->name('contactUs');
+Route::post('/contactSubmit', [PublicController::class, 'contactSubmit'])->name('contactSubmit');

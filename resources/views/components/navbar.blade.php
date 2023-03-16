@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bgBlueCus p-3">
+<nav class="navbar navbar-expand-lg bgBlueCus p-3" data-bs-theme="dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="{{Route('home')}}"> <img src="/media/logo.svg" style="width:15rem"> </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,6 +11,9 @@
           </li>
           <li class="nav-item">
             <a class="textSponge nav-link {{(Route::currentRouteName()=='about') ? 'active': ''}}" href="{{Route('about')}}">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="textSponge nav-link {{(Route::currentRouteName()=='contactUs') ? 'active': ''}}" href="{{Route('contactUs')}}">CONTACT US</a>
           </li>
           <li class="nav-item dropdown">
             <a class="textSponge nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
