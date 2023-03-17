@@ -1,8 +1,8 @@
 <x-layout>
 
-<div class="container">
-    <div class="row justify-content-end mt-5">
-        <div class="col-12 col-md-6 pt-3">
+<div class="container-fluid bg-biki">
+    <div class="row justify-content-end mt-5 ">
+        <div class="col-12 col-md-6 pt-3 pl-2 bg-light">
 
             <form method="POST" action="{{route('contactSubmit')}}">
 

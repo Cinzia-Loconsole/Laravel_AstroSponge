@@ -10,4 +10,8 @@
 
 @endif
 
+<header class=" vh-100 bg-home">
+
+</header>
+
 </x-layout>

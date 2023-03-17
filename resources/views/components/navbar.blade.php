@@ -7,7 +7,7 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class=" textSponge nav-link {{(Route::currentRouteName()=='products') ? 'active': ''}}" href="{{Route('products')}} ">PRODUCTS</a>
+            <a class=" textSponge nav-link {{(Route::currentRouteName()=='products') ? 'active': ''}}" href="{{Route('products')}} ">SIGNS</a>
           </li>
           <li class="nav-item">
             <a class="textSponge nav-link {{(Route::currentRouteName()=='about') ? 'active': ''}}" href="{{Route('about')}}">ABOUT</a>

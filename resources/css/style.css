@@ -11,5 +11,36 @@
 }
 
 .textNettuno{
-    background-color: #647fb7;
+    color: #647fb7;
 }
+
+.btn:hover{
+background-color: #ffe945;
+color: rgba(95,95,95) !important;
+}
+
+.nav-link{
+    font-family: 'Oswald', sans-serif;
+}
+
+h5{
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+}
+
+ *{
+    font-family: 'Montserrat' , sans-serif;
+    color: rgba(95,95,95);
+ }
+
+ .bg-biki{
+    background-image: url("/public/media/Bikini-Bottom.png");
+    background-position: center;
+    background-size: cover;
+ }
+
+ .bg-home{
+    background-image: url("/public/media/homebg.png");
+    background-position: center;
+    background-size: cover;
+ }

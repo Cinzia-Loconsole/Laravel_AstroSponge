@@ -20,8 +20,11 @@ use App\Http\Controllers\AboutController;
 Route::get('/', [PublicController::class,'home'])->name('home');
 
 Route::get('/products', [ProductController::class,'index'])->name('products');
+Route::get('/product-detail/{id}' , [ProductController::class, 'show'])->name('productDetails');
 
 Route::get('/about', [AboutController::class, 'index'])->name('about');
+Route::get('/about-detail/{id}' , [AboutController::class, 'show'])->name('aboutDetails');
 
-Route::get('/contactUs', [PublicController::class,'contactUs'])->name('contactUs');
-Route::post('/contactSubmit', [PublicController::class, 'contactSubmit'])->name('contactSubmit');
+Route::get('/contact-us', [PublicController::class,'contactUs'])->name('contactUs');
+Route::post('/contact-submit', [PublicController::class, 'contactSubmit'])->name('contactSubmit');
+
