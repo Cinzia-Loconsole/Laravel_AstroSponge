@@ -2,7 +2,7 @@
     <div class="container-fluid">
       <a class="navbar-brand" href="{{Route('home')}}"> <img src="/media/logo.svg" style="width:15rem"> </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <img src="/media/icons8-corallo-50.png" class="icon-spongebob" alt="" srcset="">
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
         <ul class="navbar-nav">

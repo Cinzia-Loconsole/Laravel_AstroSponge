@@ -1,9 +1,9 @@
 <x-layout>
-
+<header class="caracters">
     <x-slot name="title">Signs</x-slot>
     
     <section class="container">
-        <div class="row justify-content-center mt-4">
+        <div class="row justify-content-center">
             @foreach($caracters as $caracter)
 
             <x-card
@@ -13,10 +13,10 @@
 
             @endforeach
 
-        </div>
+        </div> 
     </section>
     
     
     
-    
+</header>   
     </x-layout>
