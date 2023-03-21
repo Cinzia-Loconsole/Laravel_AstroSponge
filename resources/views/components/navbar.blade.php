@@ -15,6 +15,14 @@
           <li class="nav-item">
             <a class="textSponge nav-link {{(Route::currentRouteName()=='contactUs') ? 'active': ''}}" href="{{Route('contactUs')}}">CONTACT US</a>
           </li>
+
+          <li class="nav-item">
+            <a class="textSponge nav-link" href="{{route('createElement')}}">CREATE PRODUCTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="textSponge nav-link" href="{{route('indexElement')}}">ALL THE PRODUCTS</a>
+          </li>
+
           <li class="nav-item dropdown">
             <a class="textSponge nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown link
