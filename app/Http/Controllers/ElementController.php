@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Element;
 use Illuminate\Http\Request;
+use App\Http\Requests\ElementRequest;
 
 
 class ElementController extends Controller
@@ -23,13 +24,15 @@ class ElementController extends Controller
 
     } 
     
-    public function store(Request $request){
+    public function store(ElementRequest $request){
 
     //MASS ASSIGNMENT
         $element = Element::create([
         'name'=>$request->name,
         'price'=>$request->price,
-        'description'=>$request->description
+        'description'=>$request->description,
+        'img'=>$request->has('img') ? $request->file('img')->store('public/image') : null
+
         ]);
 
         return redirect(route('home'))->with('message','Complimenti, hai memorizzato correttamente il prodotto!');

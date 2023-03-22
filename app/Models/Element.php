@@ -14,7 +14,8 @@ class Element extends Model
 
         'name',
         'price',
-        'description'
+        'description',
+        'img'
 
     ];
 }
