@@ -11,9 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('elements', function (Blueprint $table) {
-            $table->string('img')->after('description')->default('/public/image/default.png');
+        Schema::table('shops', function (Blueprint $table) {
             
+            $table->unsignedBigInteger('user_id')->onDelete('cascade')->default(1);
+            $table->foreign('user_id')->references('id')->on('users');
+
         });
     }
 
@@ -22,8 +24,12 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('elements', function (Blueprint $table) {
-            $table->dropColumn('img');
+        Schema::table('shops', function (Blueprint $table) {
+            
+            $table->dropForeign(['user_id']);
+            $table->dropColumn('user_id');
+
+
         });
     }
 };

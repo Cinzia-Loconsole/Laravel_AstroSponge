@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\ContactMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
 class PublicController extends Controller
@@ -28,6 +29,22 @@ class PublicController extends Controller
 
         return redirect(route('home'))->with('message', 'Congralutazioni hai inviato la mail correttamente!');
 
+    }
+
+    public function userProfile(){
+        return view ('user_profile');
+    }
+
+    public function destroy(){
+        
+        foreach (Auth::user()->shops as $shop) {
+            
+            $shop->user()->dissociate();
+            $shop->save();
+        }
+
+        Auth::user()->delete();
+        return redirect(route('home'))->with('message','Utente cancellato correttamente');
     }
     
 }

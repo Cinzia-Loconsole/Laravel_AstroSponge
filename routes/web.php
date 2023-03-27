@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ShopController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ElementController;
@@ -39,4 +40,15 @@ Route::post('/store-prod', [ElementController::class, 'store'])->name('storeElem
 Route::get('/index-prod', [ElementController::class, 'index'])->name('indexElement');
 Route::get('/show-prod/{element}', [ElementController::class, 'show'])->name('showElement');
 
+// SHOPS
+Route::get('/create-your-shop', [ShopController::class,'create'])->name('createShop');
+Route::post('/store-shop', [ShopController::class,'store'])->name('storeShop');
+Route::get('/index-shop', [ShopController::class,'index'])->name('indexShop');
+Route::get('/show-shop/{shop}', [ShopController::class,'show'])->name('showShop');
+Route::get('/edit-shop/{shop}', [ShopController::class,'edit'])->name('editShop');
+Route::put('/update-shop/{shop}', [ShopController::class,'update'])->name('updateShop');
+Route::delete('/delete-shop/{shop}', [ShopController::class, 'destroy'])->name('deleteShop');
 
+// USER
+Route::get('/user-profile',[PublicController::class,'userProfile'])->name('userProfile');
+Route::delete('/user-delete',[PublicController::class,'destroy'])->name('userDelete');

@@ -15,11 +15,9 @@
                    
                     {{-- SE L'IMMAGINE è PRESENTE --}}
                     @if($element->img)
-                    <img src="{{Storage::url($element->img)}}" alt="{{$element->name}}" srcset="">
-
-                    {{-- SE L'IMMAGINE NON è PRESENTE INSERISCI UNA RANDOM --}}
-                    @else
-                     <img src="https://picsum.photos/450/250?random={{$element->id}}" class="card-img-top" alt="...">
+                    <img src="{{Storage::url($element->image)}}" class="card-img-top" alt="{{$element->name}}">
+                    @else  {{-- SE L'IMMAGINE NON è PRESENTE INSERISCI L'IMMAGINE DI DEFAULT--}}
+                        <img src="/media/default.png" class="card-img-top" alt="...">
                     @endif
 
                     <div class="card-body">

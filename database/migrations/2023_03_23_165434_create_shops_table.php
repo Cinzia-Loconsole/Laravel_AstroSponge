@@ -11,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('elements', function (Blueprint $table) {
-            $table->string('img')->after('description')->default('/public/image/default.png');
-            
+        Schema::create('shops', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('city');
+            $table->longText('description');
+            $table->string('image')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -22,8 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('elements', function (Blueprint $table) {
-            $table->dropColumn('img');
-        });
+        Schema::dropIfExists('shops');
     }
 };

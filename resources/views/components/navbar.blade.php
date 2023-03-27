@@ -23,17 +23,61 @@
             <a class="textSponge nav-link" href="{{route('indexElement')}}">ALL THE PRODUCTS</a>
           </li>
 
+          @auth
+          <li class="nav-item">
+            <a class="textSponge nav-link" href="{{route('userProfile')}}">YOUR PROFILE</a>
+          </li>
+          @endauth
+
           <li class="nav-item dropdown">
             <a class="textSponge nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown link
+              KRUSTY-KRAB SHOP
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+          
+              <li>
+                <a class="dropdown-item" href="{{route('createShop')}}">Create</a>
+              </li>
+              <li>
+                <a class="dropdown-item"  href="{{route('indexShop')}}"> View All</a>
+              </li>
+
+            </ul>
+          </li>
+
+          {{-- LOG --}}
+          <li class="nav-item dropdown">
+            <a class="textSponge nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              LOG
+            </a>
+            <ul class="dropdown-menu">
+
+              @guest
+
+              <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
+              <li><a class="dropdown-item" href="{{route('register')}}">Sig in</a></li>
+              @else
+              <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();" >Log out</a></li>
+
+              {{-- FORM LOG OUT NASCOSTO --}}
+              <form id="form-logout" method="POST" action="{{route('logout')}}" class="d-none"> 
+                @csrf 
+              </form>
+
+              @endguest
+          
             </ul>
           </li>
         </ul>
+
+        {{-- SE OSPITE --}}
+        @guest
+          Ciao, accedi!  
+        @else 
+        {{-- SE REGISTRATO --}}
+          Ciao {{Auth::user()->name}}  
+        @endguest
+
       </div>
     </div>
   </nav>

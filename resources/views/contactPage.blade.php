@@ -37,7 +37,7 @@
         
         
                 <div class="container-fluid d-flex justify-content-center">
-                  <button type="submit" class="btn bgBlueCus text-light ">Submit</button>
+                  <button type="submit" class="btn bgBlueCus text-lights">Submit</button>
                 </div>
                 
               </form>

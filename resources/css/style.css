@@ -87,17 +87,17 @@ h1{
 
   
   
-  .cont-form {
+   .cont-form {
     margin: auto;
     width:500px;
-    border: 2px solid #6480b7d4;
+    /* border: 2px solid #6480b7d4;
     border-radius: 5px;
     background-color:  #ffe945de;
     padding: 20px;
-    color:rgb(0, 132, 139);
+    color:rgb(0, 132, 139); */
     font-size:20px;
-    animation: myAnim 2s ease 0s 1 normal forwards;
-      }
+    animation: myAnim 2.5s ease 0s 1 normal forwards;
+      } 
   
   @keyframes myAnim {
       0% {
@@ -111,7 +111,7 @@ h1{
       }
   }
   
-  input[type=text], select, textarea {
+  /* input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid rgba(19, 19, 19, 0.604);
@@ -123,7 +123,7 @@ h1{
     resize: vertical;
     color:#797d7f;
     font-size: 17px;
-  }
+  } */
 
   @media screen and (max-width: 600px) {
   .container{font-size: 17px; width:100%}
