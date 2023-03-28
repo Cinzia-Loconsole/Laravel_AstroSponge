@@ -71,6 +71,8 @@ class ShopController extends Controller
             'image'=>$request->has('image') ? $request->file('image')->store('public/image'):$shop->image
         ]);
 
+        $element->$shops()->attach($request->shops);
+
         return redirect(route('home'))->with('message', 'Azione sul negozio avvenuta correttamente!');
     }
 

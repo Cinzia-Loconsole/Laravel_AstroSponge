@@ -33,18 +33,26 @@
                             </div>
                         </div>
                         
-                        <div class="container">
+                @if($shop->image)
+                    <img src="{{Storage::url($shop->image)}}" class="card-img-top" alt="{{$shop->name}}">
+                @else
+                    <img src="/img/default.jpg" class="card-img-top" alt="...">
+                @endif
+                        
+                        <div class="container mt-3">
                             <div class="row justify-content-center">
                                 <div class="col-12 d-flex justify-content-center">
                                     <p>{{$shop->description}}</p>
                                 </div>
                             </div>
                         </div>
+
+                
                         
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-12 d-flex justify-content-center">
-                                    <p>Inserito da {{$shop->user->name}}</p>
+                                    <p>Posted by {{$shop->user->name}}</p>
                                 </div>
                             </div>
                         </div>

@@ -55,7 +55,7 @@
                         <div class="container-fluid d-flex justify-content-center">
                             <label for="exampleInputImage" class="form-label">Imagine:</label>
                               </div>
-                            <input name="image" type="file" class="form-control " id="exampleInputImage" aria-describedby="imageHelp" accept="image/jpg, image/png, image/webp, image/png">
+                            <input name="image" type="file" class="form-control " id="exampleInputImage" aria-describedby="imageHelp" accept="image/jpg, image/webp, image/png">
                             {{-- ESTENSIONI CONSENTITE NELLA RICERCA DA PARTE DELL'UTENTE E PER FAR APPARIRE L'ERRORE SOTTO IL CAMPO CORRISPONDENTE--}}
                             @error('image')
                             <div class="alert alert-danger">{{ $message }}</div>
@@ -72,7 +72,7 @@
                           <div class="mb-3">
     
                         <div class="container-fluid d-flex justify-content-center">
-                        <button type="submit" class="btn text-light bgBlueCus border-0">Insert the product</button>
+                        <button type="submit" class="btn text-light bgBlueCus border-0">Insert the shop</button>
                         </div>
                           </div>
                     </form>

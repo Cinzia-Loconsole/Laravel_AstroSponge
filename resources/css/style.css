@@ -14,10 +14,12 @@
     color: #647fb7;
 }
 
-.btn:hover{
-background-color: #ffe945;
-color: rgba(95,95,95) !important;
+/* .btn:hover{
+    filter: brightness(90%);
 }
+
+     */
+
 
 .nav-link{
     font-family: 'Oswald', sans-serif;

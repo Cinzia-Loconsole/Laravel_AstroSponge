@@ -78,13 +78,23 @@
                         @error('img')
                         <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
-                    
+
+                    <div class=" mb-3 mt-3">
+                        <label for="exampleInputShop" class="text-center form-label">Choose your shop:</label>
+                        <select name="shops[]"{{-- CON [] VEDO TUTTI I NEGOZI IN UN ARRAY DI ARRAY --}} multiple class="form-select" id="exampleInputShop" aria-label="Default select example">
+                            
+                            @foreach ($shops as $shop)
+                           
+                                <option value="{{$shop->id}}">{{$shop->name}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
                     {{-- lEGENDA CAMPO OBBLIGATORIO --}}
                     <div class="container-fluid d-flex justify-content-center mt-3">
                       <p>* = Campo Obbligatorio</p>
                       </div>
                       </div>
-
                       
 
                       <div class="mb-3">

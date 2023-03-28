@@ -23,6 +23,33 @@
 
                         <div class="container-fluid d-flex justify-content-center mt-3">
                         <a href="{{route('showElement', compact('element'))}}" class="btn text-light bgBlueCus border-0">Detail</a>
+
+                        @auth
+                            @if($element->user)
+                                @if(Auth::user()->id == $element->user->id || Auth::user()->id == 1)
+
+                                    <a href="{{route('editElement', compact('element'))}}" class="btn bgYellowCus">Edit</a>
+                                    <a href="" onclick="event.preventDefault(); document.querySelector('#form-delete-{{$element->id}}').submit();" class="btn btn-danger">Delete</a>
+                                    <form id="form-delete-{{$element->id}}" method="POST" action="{{route('deleteElement', compact('element'))}}">
+                                        @method('delete')
+                                        @csrf
+                                    </form>
+
+                                 @endif
+
+
+                        @elseif(Auth::user()->id == 1)
+
+                            <a href="{{route('editElement', compact('element'))}}" class="btn btn-warning">Edit</a>
+                            <a href="" onclick="event.preventDefault(); document.querySelector('#form-delete-{{$element->id}}').submit();" class="btn btn-danger">Delete</a>
+                            <form id="form-delete-{{$element->id}}" method="POST" action="{{route('deleteElement', compact('element'))}}">
+                                @method('delete')
+                                @csrf
+                            </form>
+
+                            @endif
+                        @endauth
+
                         </div>
                     </div>
                 </div>

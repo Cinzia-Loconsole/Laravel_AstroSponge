@@ -39,6 +39,9 @@ Route::get('/create-prod', [ElementController::class, 'create'])->name('createEl
 Route::post('/store-prod', [ElementController::class, 'store'])->name('storeElement');
 Route::get('/index-prod', [ElementController::class, 'index'])->name('indexElement');
 Route::get('/show-prod/{element}', [ElementController::class, 'show'])->name('showElement');
+Route::get('/edit-prod/{element}', [ElementController::class, 'edit'])->name('editElement');
+Route::put('/update-prod/{element}', [ElementController::class, 'update'])->name('updateElement');
+Route::delete('/delete-prod/{element}', [ElementController::class, 'destroy'])->name('deleteElement');
 
 // SHOPS
 Route::get('/create-your-shop', [ShopController::class,'create'])->name('createShop');
