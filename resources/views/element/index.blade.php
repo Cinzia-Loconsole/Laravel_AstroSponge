@@ -35,18 +35,7 @@
                                         @csrf
                                     </form>
 
-                                 @endif
-
-
-                        @elseif(Auth::user()->id == 1)
-
-                            <a href="{{route('editElement', compact('element'))}}" class="btn btn-warning">Edit</a>
-                            <a href="" onclick="event.preventDefault(); document.querySelector('#form-delete-{{$element->id}}').submit();" class="btn btn-danger">Delete</a>
-                            <form id="form-delete-{{$element->id}}" method="POST" action="{{route('deleteElement', compact('element'))}}">
-                                @method('delete')
-                                @csrf
-                            </form>
-
+                                @endif
                             @endif
                         @endauth
 
